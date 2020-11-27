@@ -1,0 +1,32 @@
+C:\Users\Kamvitae Surimushado\source\repos\MP_5_2 HRCompanion\MP_5_2 HRCompanion\obj\Debug\MP_5_2 HRCompanion.csprojAssemblyReference.cache
+C:\Users\Kamvitae Surimushado\source\repos\MP_5_2 HRCompanion\MP_5_2 HRCompanion\obj\Debug\MP_5_2_HRCompanion.FormMain.resources
+C:\Users\Kamvitae Surimushado\source\repos\MP_5_2 HRCompanion\MP_5_2 HRCompanion\obj\Debug\MP_5_2_HRCompanion.Properties.Resources.resources
+C:\Users\Kamvitae Surimushado\source\repos\MP_5_2 HRCompanion\MP_5_2 HRCompanion\obj\Debug\MP_5_2 HRCompanion.csproj.GenerateResource.cache
+C:\Users\Kamvitae Surimushado\source\repos\MP_5_2 HRCompanion\MP_5_2 HRCompanion\obj\Debug\MP_5_2 HRCompanion.csproj.CoreCompileInputs.cache
+C:\Users\Kamvitae Surimushado\source\repos\MP_5_2 HRCompanion\MP_5_2 HRCompanion\bin\Debug\MP_5_2 HRCompanion.exe.config
+C:\Users\Kamvitae Surimushado\source\repos\MP_5_2 HRCompanion\MP_5_2 HRCompanion\bin\Debug\MP_5_2 HRCompanion.exe
+C:\Users\Kamvitae Surimushado\source\repos\MP_5_2 HRCompanion\MP_5_2 HRCompanion\bin\Debug\MP_5_2 HRCompanion.pdb
+C:\Users\Kamvitae Surimushado\source\repos\MP_5_2 HRCompanion\MP_5_2 HRCompanion\obj\Debug\MP_5_2 HRCompanion.exe
+C:\Users\Kamvitae Surimushado\source\repos\MP_5_2 HRCompanion\MP_5_2 HRCompanion\obj\Debug\MP_5_2 HRCompanion.pdb
+C:\Users\Kamvitae Surimushado\source\repos\MP_5_2 HRCompanion\MP_5_2 HRCompanion\obj\Debug\MP_5_2_HRCompanion.AddEditWorker.resources
+C:\Users\Kamvitae Surimushado\source\repos\MP_5_2 HRCompanion\MP_5_2 HRCompanion\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Kamvitae Surimushado\source\repos\MP_5_2 HRCompanion\MP_5_2 HRCompanion\bin\Debug\System.Buffers.dll
+C:\Users\Kamvitae Surimushado\source\repos\MP_5_2 HRCompanion\MP_5_2 HRCompanion\bin\Debug\System.Memory.dll
+C:\Users\Kamvitae Surimushado\source\repos\MP_5_2 HRCompanion\MP_5_2 HRCompanion\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Kamvitae Surimushado\source\repos\MP_5_2 HRCompanion\MP_5_2 HRCompanion\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Kamvitae Surimushado\source\repos\MP_5_2 HRCompanion\MP_5_2 HRCompanion\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\Kamvitae Surimushado\source\repos\MP_5_2 HRCompanion\MP_5_2 HRCompanion\bin\Debug\System.Text.Json.dll
+C:\Users\Kamvitae Surimushado\source\repos\MP_5_2 HRCompanion\MP_5_2 HRCompanion\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Kamvitae Surimushado\source\repos\MP_5_2 HRCompanion\MP_5_2 HRCompanion\bin\Debug\System.ValueTuple.dll
+C:\Users\Kamvitae Surimushado\source\repos\MP_5_2 HRCompanion\MP_5_2 HRCompanion\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\Kamvitae Surimushado\source\repos\MP_5_2 HRCompanion\MP_5_2 HRCompanion\bin\Debug\System.Buffers.xml
+C:\Users\Kamvitae Surimushado\source\repos\MP_5_2 HRCompanion\MP_5_2 HRCompanion\bin\Debug\System.Memory.xml
+C:\Users\Kamvitae Surimushado\source\repos\MP_5_2 HRCompanion\MP_5_2 HRCompanion\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Kamvitae Surimushado\source\repos\MP_5_2 HRCompanion\MP_5_2 HRCompanion\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Kamvitae Surimushado\source\repos\MP_5_2 HRCompanion\MP_5_2 HRCompanion\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\Kamvitae Surimushado\source\repos\MP_5_2 HRCompanion\MP_5_2 HRCompanion\bin\Debug\System.Text.Json.xml
+C:\Users\Kamvitae Surimushado\source\repos\MP_5_2 HRCompanion\MP_5_2 HRCompanion\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Kamvitae Surimushado\source\repos\MP_5_2 HRCompanion\MP_5_2 HRCompanion\bin\Debug\System.ValueTuple.xml
+C:\Users\Kamvitae Surimushado\source\repos\MP_5_2 HRCompanion\MP_5_2 HRCompanion\obj\Debug\MP_5_2 HRCompanion.csproj.CopyComplete
+C:\Users\Kamvitae Surimushado\source\repos\MP_5_2 HRCompanion\MP_5_2 HRCompanion\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Kamvitae Surimushado\source\repos\MP_5_2 HRCompanion\MP_5_2 HRCompanion\bin\Debug\Newtonsoft.Json.xml
