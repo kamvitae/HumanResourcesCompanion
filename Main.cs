@@ -34,12 +34,12 @@ namespace MP_5_2_HRCompanion
         public FormMain()
         {
             InitializeComponent();
-            var employees = new List<Worker>(){};   //przykładowa lista która się niby zapisuje ale jednak nie do końca
+            //var employees = new List<Worker>(){};   przykładowa lista która się niby zapisuje ale jednak nie do końca
            // employees.Add(new Worker("Jacek"));
            // employees.Add(new Worker("Placek"));
            // employees.Add(new Worker("Agatka"));
            // employees.Add(new Worker("Pałatka"));
-            _fileHelper.SerializeToFile(employees);
+           // _fileHelper.SerializeToFile(employees);
             RefreshGrid();
             SetColumnsHeader();
 
