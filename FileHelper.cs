@@ -19,7 +19,7 @@ namespace MP_5_2_HRCompanion
 
         public void SerializeToFile(List<Worker> workers)
         {
-            var jsonString = JsonConvert.SerializeObject(workers);
+            var jsonString = JsonConvert.SerializeObject(workers, (Formatting)1);
             File.WriteAllText(_dataPath, jsonString);
         }
 

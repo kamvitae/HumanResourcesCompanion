@@ -55,7 +55,7 @@ namespace MP_5_2_HRCompanion
         {
             var worker = new Worker
             {
-                WorkerID = Convert.ToInt32(tbWorkerID.Text), // raz ustawiony powinien być readonly
+                WorkerID = _workerId, // raz ustawiony powinien być readonly
                 Name = tbName.Text,
                 LastName = tbLastName.Text,
                 Hired = Convert.ToDateTime(tbHired.Text), // ten txtbox powinien automatycznie uzupełniać Datę przy zatrudnieniu nowego.

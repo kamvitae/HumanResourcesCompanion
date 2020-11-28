@@ -34,12 +34,12 @@ namespace MP_5_2_HRCompanion
         public FormMain()
         {
             InitializeComponent();
-            var employees = new List<Worker>(){};   //przykładowa lista która się niby zapisuje ale jednak nie do końca
+            //var employees = new List<Worker>(){};   przykładowa lista która się niby zapisuje ale jednak nie do końca
            // employees.Add(new Worker("Jacek"));
            // employees.Add(new Worker("Placek"));
            // employees.Add(new Worker("Agatka"));
            // employees.Add(new Worker("Pałatka"));
-            _fileHelper.SerializeToFile(employees);
+           // _fileHelper.SerializeToFile(employees);
             RefreshGrid();
             SetColumnsHeader();
 
@@ -56,13 +56,13 @@ namespace MP_5_2_HRCompanion
 
         private void SetColumnsHeader()
         {
-            dgvWorkers.Columns[0].HeaderText = "Identyfikatow pracownika";
+            dgvWorkers.Columns[0].HeaderText = "Identyfikatow pracownika"; // ustaw niemodyfikowalne wszystkie z poziomu dgv
             dgvWorkers.Columns[1].HeaderText = "Imię";
             dgvWorkers.Columns[2].HeaderText = "Nazwisko";
-            dgvWorkers.Columns[3].HeaderText = "Data zatrudnienia";
-            dgvWorkers.Columns[4].HeaderText = "Zakończył(a) pracę";
+            dgvWorkers.Columns[3].HeaderText = "Data zatrudnienia"; 
+            dgvWorkers.Columns[4].HeaderText = "Zakończył(a) pracę"; 
             dgvWorkers.Columns[5].HeaderText = "Pensja brutto";
-            dgvWorkers.Columns[6].HeaderText = "Uwagi";
+            dgvWorkers.Columns[6].HeaderText = "Uwagi"; // z wyjątkiem uwag
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
