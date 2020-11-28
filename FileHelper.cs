@@ -29,7 +29,7 @@ namespace MP_5_2_HRCompanion
                 return new T();
 
             var workers = JsonConvert.DeserializeObject
-                        <T>(_dataPath);
+                        <T>(File.ReadAllText(_dataPath));
 
             return workers;
         }
