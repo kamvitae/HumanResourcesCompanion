@@ -23,13 +23,15 @@ namespace MP_5_2_HRCompanion.Properties {
             }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
         public bool IsMaximize {
-            get
-            {
+            get {
                 return ((bool)(this["IsMaximize"]));
+            }
+            set {
+                this["IsMaximize"] = value;
             }
         }
     }

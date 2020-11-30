@@ -131,8 +131,6 @@
             // 
             this.chBoxFired.AutoSize = true;
             this.chBoxFired.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.chBoxFired.Checked = true;
-            this.chBoxFired.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chBoxFired.Location = new System.Drawing.Point(373, 34);
             this.chBoxFired.Name = "chBoxFired";
             this.chBoxFired.Size = new System.Drawing.Size(151, 17);

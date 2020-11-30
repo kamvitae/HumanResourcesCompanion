@@ -26,8 +26,7 @@ namespace MP_5_2_HRCompanion
             }
             set
             {
-               
-                //Settings.Default.IsMaximize = value;
+                Settings.Default.IsMaximize = value;
             }
         }
 
