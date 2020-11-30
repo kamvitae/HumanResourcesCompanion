@@ -31,7 +31,7 @@
     "LastName": "Panda",
     "Name": "Wanda",
     "Hired": "01.01.2001",
-    "Fired": "06.06.2006",
+    "Fired": "",
     "Salary": 6357.78,
     "Comments": "podejrzana"
   },
@@ -40,7 +40,7 @@
     "LastName": "Miś",
     "Name": "Krzyś",
     "Hired": "12.05.2020",
-    "Fired": "12.12.2021",
+    "Fired": "",
     "Salary": 3500.15,
     "Comments": ""
   },
@@ -48,7 +48,7 @@
     "WorkerID": 1001,
     "LastName": "Koniuszek",
     "Name": "Marek",
-    "Hired": "25.11.2005",
+    "Hired": "25.11.1985",
     "Fired": "26.12.2025",
     "Salary": 3509.95,
     "Comments": "uwagi jakieś"
@@ -66,7 +66,7 @@
     "WorkerID": 1010,
     "LastName": "Szpak",
     "Name": "Michał",
-    "Hired": "30.11.2020",
+    "Hired": "14.04.203",
     "Fired": "",
     "Salary": 3701.25,
     "Comments": ""
@@ -75,9 +75,54 @@
     "WorkerID": 1008,
     "LastName": "Maś",
     "Name": "Kaja",
-    "Hired": "30.11.2020",
-    "Fired": "30.11.2020",
+    "Hired": "03.10.2000",
+    "Fired": "",
     "Salary": 1876.45,
+    "Comments": "Stażystka"
+  },
+  {
+    "WorkerID": 1009,
+    "LastName": "Kryś",
+    "Name": "Kinga",
+    "Hired": "22.09.1999",
+    "Fired": "31.12.2000",
+    "Salary": 1999.45,
     "Comments": "Nie istnieje"
+  },
+  {
+    "WorkerID": 1011,
+    "LastName": "Kamil",
+    "Name": "Urbański",
+    "Hired": "25.06.2000",
+    "Fired": "",
+    "Salary": 2476.45,
+    "Comments": "Dobry człek"
+  },
+  {
+    "WorkerID": 1012,
+    "LastName": "Chwat",
+    "Name": "Chłop",
+    "Hired": "13.04.2008",
+    "Fired": "",
+    "Salary": 2673.75,
+    "Comments": "Zuch"
+  },
+  {
+    "WorkerID": 1013,
+    "LastName": "Jessica",
+    "Name": "Alba",
+    "Hired": "01.08.2004",
+    "Fired": "",
+    "Salary": 3456.52,
+    "Comments": ""
+  },
+  {
+    "WorkerID": 1014,
+    "LastName": "Albert",
+    "Name": "Zdulski",
+    "Hired": "04.07.1988",
+    "Fired": "",
+    "Salary": 5432.10,
+    "Comments": "Jedyny informatyk"
   }
 ]

@@ -26,8 +26,8 @@ namespace MP_5_2_HRCompanion
             }
             set
             {
-                // Gdzie można usunąć status "readonly"?
-                // Settings.Default.IsMaximize = value;
+               
+                //Settings.Default.IsMaximize = value;
             }
         }
 

@@ -8,12 +8,6 @@ namespace MP_5_2_HRCompanion
 {
     public class Worker
     {
-        //private string _name;
-//
-        //public Worker(string name)
-       //{
-        //    this._name = name;
-        //}
         public int WorkerID { get; set; } 
 
         // można wprowadzić dodatkowego boola "currentlyEmployeed" <-- dawałby możliwość sortowania wg. obecnych/byłych pracowników
