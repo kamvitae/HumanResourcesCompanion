@@ -6,13 +6,17 @@ using System.Threading.Tasks;
 
 namespace MP_5_2_HRCompanion
 {
-    class SortWorkers: ISortLists<Worker>
+    class SortWorkers : ISortLists<Worker>
     {
         private List<Worker> workers;
         private int sortMethod;
-        public SortWorkers (List<Worker> listToSort, int comboSelectedIndex)
+        public SortWorkers(List<Worker> listToSort, int comboSelectedIndex, bool hideFired)
         {
-            workers = listToSort;
+            if (hideFired)
+                workers = FilterCurrentyHiredOnly(listToSort, hideFired);
+
+            else
+                workers = listToSort;
             sortMethod = comboSelectedIndex;
         }
         public List<Worker> CheckSortingMethod(int sortMethod, List<Worker> listToSort) //deFacto niepotrzebna metoda
@@ -25,18 +29,18 @@ namespace MP_5_2_HRCompanion
                 case 1:
                     return OrderByIDdescending(workers);
                     break;
-                 case 2:
+                case 2:
                     return OrderByLastName(workers);
-                     break;
-                 case 3:
+                    break;
+                case 3:
                     return OrderByLastNameDescending(workers);
                     break;
-                 case 4:
+                case 4:
                     return OrderByHireDate(workers);
-                     break;
-                 case 5:
+                    break;
+                case 5:
                     return OrderByHireDateDescending(workers);
-                     break;
+                    break;
                 case 6:
                     return OrderBySalary(workers);
                     break;
@@ -95,10 +99,10 @@ namespace MP_5_2_HRCompanion
             return list = orderBy.ToList();
         }
 
-        // private List<Worker> FilterStudentsByGroup(List<Worker> listToFilter, int groupFilter)
-        //{
-        //    return listToFilter.Where(x => x.GroupID == groupFilter).ToList();
-        //}
+        private List<Worker> FilterCurrentyHiredOnly(List<Worker> list, bool hideFired)
+        {
+            return list.Where(Worker => Worker.Fired == "").ToList();
+        }
 
     }
 }

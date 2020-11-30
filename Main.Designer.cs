@@ -36,6 +36,7 @@
             this.dgvWorkers = new System.Windows.Forms.DataGridView();
             this.btnSave = new System.Windows.Forms.Button();
             this.lbComboSort = new System.Windows.Forms.Label();
+            this.chBoxFired = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvWorkers)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,7 +54,7 @@
             // btnEdit
             // 
             this.btnEdit.BackColor = System.Drawing.Color.Khaki;
-            this.btnEdit.Location = new System.Drawing.Point(113, 28);
+            this.btnEdit.Location = new System.Drawing.Point(105, 28);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(75, 23);
             this.btnEdit.TabIndex = 1;
@@ -64,7 +65,7 @@
             // btnFired
             // 
             this.btnFired.BackColor = System.Drawing.Color.IndianRed;
-            this.btnFired.Location = new System.Drawing.Point(735, 28);
+            this.btnFired.Location = new System.Drawing.Point(796, 28);
             this.btnFired.Name = "btnFired";
             this.btnFired.Size = new System.Drawing.Size(53, 23);
             this.btnFired.TabIndex = 2;
@@ -76,7 +77,7 @@
             // 
             this.cbboxSorter.BackColor = System.Drawing.Color.LightCyan;
             this.cbboxSorter.FormattingEnabled = true;
-            this.cbboxSorter.Location = new System.Drawing.Point(514, 30);
+            this.cbboxSorter.Location = new System.Drawing.Point(599, 30);
             this.cbboxSorter.Name = "cbboxSorter";
             this.cbboxSorter.Size = new System.Drawing.Size(121, 21);
             this.cbboxSorter.TabIndex = 3;
@@ -85,7 +86,7 @@
             // btnRefresh
             // 
             this.btnRefresh.BackColor = System.Drawing.Color.PowderBlue;
-            this.btnRefresh.Location = new System.Drawing.Point(317, 28);
+            this.btnRefresh.Location = new System.Drawing.Point(292, 28);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(75, 23);
             this.btnRefresh.TabIndex = 4;
@@ -105,12 +106,12 @@
             this.dgvWorkers.EnableHeadersVisualStyles = false;
             this.dgvWorkers.Location = new System.Drawing.Point(15, 57);
             this.dgvWorkers.Name = "dgvWorkers";
-            this.dgvWorkers.Size = new System.Drawing.Size(988, 439);
+            this.dgvWorkers.Size = new System.Drawing.Size(836, 466);
             this.dgvWorkers.TabIndex = 5;
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(216, 28);
+            this.btnSave.Location = new System.Drawing.Point(200, 28);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 6;
@@ -120,17 +121,32 @@
             // lbComboSort
             // 
             this.lbComboSort.AutoSize = true;
-            this.lbComboSort.Location = new System.Drawing.Point(451, 33);
+            this.lbComboSort.Location = new System.Drawing.Point(536, 35);
             this.lbComboSort.Name = "lbComboSort";
             this.lbComboSort.Size = new System.Drawing.Size(57, 13);
             this.lbComboSort.TabIndex = 7;
             this.lbComboSort.Text = "Sortuj wg.:";
             // 
+            // chBoxFired
+            // 
+            this.chBoxFired.AutoSize = true;
+            this.chBoxFired.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.chBoxFired.Checked = true;
+            this.chBoxFired.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chBoxFired.Location = new System.Drawing.Point(373, 34);
+            this.chBoxFired.Name = "chBoxFired";
+            this.chBoxFired.Size = new System.Drawing.Size(151, 17);
+            this.chBoxFired.TabIndex = 9;
+            this.chBoxFired.Text = "Ukryj byłych pracowników";
+            this.chBoxFired.UseVisualStyleBackColor = true;
+            this.chBoxFired.CheckStateChanged += new System.EventHandler(this.checkBox1_CheckStateChanged);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1012, 508);
+            this.ClientSize = new System.Drawing.Size(860, 535);
+            this.Controls.Add(this.chBoxFired);
             this.Controls.Add(this.lbComboSort);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.dgvWorkers);
@@ -159,6 +175,7 @@
         private System.Windows.Forms.DataGridView dgvWorkers;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Label lbComboSort;
+        private System.Windows.Forms.CheckBox chBoxFired;
     }
 }
 

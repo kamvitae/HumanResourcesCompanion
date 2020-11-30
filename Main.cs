@@ -43,20 +43,19 @@ namespace MP_5_2_HRCompanion
         private void RefreshGrid()
         {
             var workers = _fileHelper.DeserializeFromFile();
-            var sortWorkers = new SortWorkers(workers, cbboxSorter.SelectedIndex);
+            var sortWorkers = new SortWorkers(workers,
+                                cbboxSorter.SelectedIndex, chBoxFired.Checked);
             dgvWorkers.DataSource = sortWorkers.GetSortedList();
         }
-
-
         private void SetColumnsHeader()
         {
-            dgvWorkers.Columns[0].HeaderText = "Identyfikatow pracownika"; // ustaw niemodyfikowalne wszystkie z poziomu dgv
+            dgvWorkers.Columns[0].HeaderText = "Identyfikatow pracownika";
             dgvWorkers.Columns[1].HeaderText = "Nazwisko";
             dgvWorkers.Columns[2].HeaderText = "Imię";
             dgvWorkers.Columns[3].HeaderText = "Data zatrudnienia";
             dgvWorkers.Columns[4].HeaderText = "Zakończył(a) pracę";
             dgvWorkers.Columns[5].HeaderText = "Pensja brutto";
-            dgvWorkers.Columns[6].HeaderText = "Uwagi"; // z wyjątkiem uwag
+            dgvWorkers.Columns[6].HeaderText = "Uwagi";
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -79,12 +78,6 @@ namespace MP_5_2_HRCompanion
             addEditWorker.FormClosing += AddEditWorker_FormClosing;
             addEditWorker.ShowDialog();
         }
-
-        private void btnRefresh_Click(object sender, EventArgs e)
-        {
-            RefreshGrid();
-        }
-
         private void btnFired_Click(object sender, EventArgs e)
         {
             if (dgvWorkers.SelectedRows.Count == 0)
@@ -96,18 +89,16 @@ namespace MP_5_2_HRCompanion
             {
                 var title = "Rozwiązanie umowy o zatrudnienie";
                 var message = "Czy na pewno chcesz zwolnić tego pracownika?";
-                if (MessageBox.Show(message, title, 
-                    MessageBoxButtons.OKCancel)==DialogResult.OK)
+                if (MessageBox.Show(message, title,
+                    MessageBoxButtons.OKCancel) == DialogResult.OK)
                 {
                     FireSelectedWorker();
                 }
             }
-
             // po kliknięciu otwiera się okno z pytaniem czy na pewno chesz zwolnić pracownika. 
-            // nieaktywny przycisk "ok" uaktywni się po wpisaniu w txtBox Imienia i Nazwiska zwalnianego pracownika
-            // "ok" wprowawdzi do pola Fired pracownika aktualną datę.
+            // przycisk "ok" otwiera okno edycji pracownika z wpisaną obecną datą zwolnienia.
+            // można jeszcze wycofać się z decyzji.
         }
-
         private void FireSelectedWorker()
         {
             var addEditWorker = new AddEditWorker(
@@ -118,13 +109,15 @@ namespace MP_5_2_HRCompanion
             addEditWorker.ShowDialog();
         }
 
-        private void chboxFilter_SelectedIndexChanged(object sender, EventArgs e)
+        private void btnRefresh_Click(object sender, EventArgs e)
         {
-            // filtrowanie wg : Alfabetycznie, Identyfikator, StanuZatrudnienia. Wys.Stawki 
+            RefreshGrid();
         }
 
-
-
+        private void chboxFilter_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // RefreshGrid();
+        }
         private void FormMain_FormClosed(object sender, FormClosedEventArgs e)
         {
             if (WindowState == FormWindowState.Maximized)
@@ -135,6 +128,11 @@ namespace MP_5_2_HRCompanion
             Settings.Default.Save();
         }
         private void AddEditWorker_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            RefreshGrid();
+        }
+
+        private void checkBox1_CheckStateChanged(object sender, EventArgs e)
         {
             RefreshGrid();
         }
