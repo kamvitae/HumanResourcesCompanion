@@ -36,7 +36,7 @@ namespace MP_5_2_HRCompanion
 
                 if (_worker == null)
                 {
-                    throw new Exception("PRacownik o podanym identyfikatorze nie istnieje");
+                    throw new Exception("Pracownik o podanym identyfikatorze nie istnieje");
                 }
                 FillTextBoxes();
             }
@@ -96,5 +96,7 @@ namespace MP_5_2_HRCompanion
         {
             Close();
         }
+
+        
     }
 }
