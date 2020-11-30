@@ -23,8 +23,21 @@ namespace MP_5_2_HRCompanion
             InitializeComponent();
             _workerId = id;
             GetWorkerData();
-
         }
+
+        public AddEditWorker(DateTime today)
+        {
+            InitializeComponent();
+            tbHired.Text = GetTodaysDate(today);
+        }
+        public AddEditWorker(DateTime today, int id = 0)
+        {
+            InitializeComponent();
+            _workerId = id;
+            GetWorkerData();
+            tbFired.Text = GetTodaysDate(today);
+        }
+
         private void GetWorkerData()
         {
             if (_workerId != 0)
@@ -46,8 +59,8 @@ namespace MP_5_2_HRCompanion
             tbWorkerID.Text = _worker.WorkerID.ToString();
             tbName.Text = _worker.Name;
             tbLastName.Text = _worker.LastName;
-            tbHired.Text = _worker.Hired.ToString();
-            tbFired.Text = _worker.Fired.ToString();
+            tbHired.Text = _worker.Hired;
+            tbFired.Text = _worker.Fired;
             tbSalary.Text = _worker.Salary.ToString();
             rtbComments.Text = _worker.Comments;
         }
@@ -58,45 +71,48 @@ namespace MP_5_2_HRCompanion
                 WorkerID = _workerId, // raz ustawiony powinien być readonly
                 Name = tbName.Text,
                 LastName = tbLastName.Text,
-                Hired = Convert.ToDateTime(tbHired.Text), // ten txtbox powinien automatycznie uzupełniać Datę przy zatrudnieniu nowego.
-                                                        // i pozostawić starą datę podczas edycji 
-                Fired = Convert.ToDateTime(tbFired.Text), // ten txtBox powinien być nieedytowalny. 
-                                                        //Jedynie wyświetlać datę ustawioną po wciśnięciu przycisku "Zwolnij"
-                Salary = Convert.ToDecimal(tbSalary.Text), // żeby nie zmienić "przypadkowo" wypłaty po wciśnięciu okienka otworzymy nowe
-                                                          // w którym trzeba będzie wprowadzić 1) obecną wypłatę 2) nową stawkę
-                Comments = rtbComments.Text
+                Hired = tbHired.Text,
+                Fired = tbFired.Text,Comments = rtbComments.Text
             };
-            workers.Add(worker);
+            if (decimal.TryParse(tbSalary.Text, out decimal result))
+            {
+                worker.Salary = result; // żeby nie zmienić "przypadkowo" wypłaty po wciśnięciu okienka otworzymy nowe
+            }
+        workers.Add(worker);
         }
-        private void AssignIdToWorker(List<Worker> workers) 
-        {
-            var workerWithHigherID = workers.
-                OrderByDescending(x => x.WorkerID).FirstOrDefault();
+    private void AssignIdToWorker(List<Worker> workers)
+    {
+        var workerWithHigherID = workers.
+            OrderByDescending(x => x.WorkerID).FirstOrDefault();
 
-            _workerId = workerWithHigherID == 
-                null ? 1001 : workerWithHigherID.WorkerID + 1;
-        }
-
-        private void btnConfirm_Click(object sender, EventArgs e)
-        {
-            List<Worker> workers = _fileHelper.DeserializeFromFile();
-
-            if (_workerId!=0)
-                workers.RemoveAll(x => x.WorkerID == _workerId);
-            else
-                AssignIdToWorker(workers);
-
-            AddWorkerToList(workers);
-
-            _fileHelper.SerializeToFile(workers);
-            Close();
-        }
-
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        
+        _workerId = workerWithHigherID ==
+            null ? 1001 : workerWithHigherID.WorkerID + 1;
     }
+
+    private void btnConfirm_Click(object sender, EventArgs e)
+    {
+        List<Worker> workers = _fileHelper.DeserializeFromFile();
+
+        if (_workerId != 0)
+            workers.RemoveAll(x => x.WorkerID == _workerId);
+        else
+            AssignIdToWorker(workers);
+
+        AddWorkerToList(workers);
+
+        _fileHelper.SerializeToFile(workers);
+        Close();
+    }
+
+    private void btnCancel_Click(object sender, EventArgs e)
+    {
+        Close();
+    }
+    private string GetTodaysDate(DateTime todaysDate)
+    {
+        var dateTime = todaysDate;
+        //var date = dateTime.Date;
+        return dateTime.ToString("d");
+    }
+}
 }

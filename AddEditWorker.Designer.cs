@@ -72,6 +72,7 @@
             // 
             this.tbFired.Location = new System.Drawing.Point(124, 179);
             this.tbFired.Name = "tbFired";
+            this.tbFired.ReadOnly = true;
             this.tbFired.Size = new System.Drawing.Size(190, 20);
             this.tbFired.TabIndex = 5;
             // 
@@ -86,6 +87,7 @@
             // 
             this.tbHired.Location = new System.Drawing.Point(124, 153);
             this.tbHired.Name = "tbHired";
+            this.tbHired.ReadOnly = true;
             this.tbHired.Size = new System.Drawing.Size(190, 20);
             this.tbHired.TabIndex = 3;
             // 

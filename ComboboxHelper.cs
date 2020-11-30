@@ -15,8 +15,8 @@ namespace MP_5_2_HRCompanion
             {
                 new Sort { Id = 0, SortBy = "ID, rosnąco" },
                 new Sort { Id = 1, SortBy = "ID, malejąco" },
-                new Sort { Id = 2, SortBy = "Alfabetycznie, rosnąco" },
-                new Sort { Id = 3, SortBy = "Alfabetycznie, malejąco" },
+                new Sort { Id = 2, SortBy = "Nazwisko, rosnąco" },
+                new Sort { Id = 3, SortBy = "Nazwisko, malejąco" },
                 new Sort { Id = 4, SortBy = "Stażu pracy, rosnąco" },
                 new Sort { Id = 5, SortBy = "Stażu pracy, malejąco" },
                 new Sort { Id = 6, SortBy = "Zarobków, rosnąco" },

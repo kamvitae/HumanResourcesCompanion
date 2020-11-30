@@ -18,11 +18,11 @@ namespace MP_5_2_HRCompanion
 
         // można wprowadzić dodatkowego boola "currentlyEmployeed" <-- dawałby możliwość sortowania wg. obecnych/byłych pracowników
 
-        public string Name { get; set; }
         public string LastName { get; set; }
+        public string Name { get; set; }
 
-        public DateTime Hired{ get; set; }
-        public DateTime Fired{ get; set; }
+        public string Hired{ get; set; }
+        public string Fired{ get; set; }
 
         public decimal Salary { get; set; }
 

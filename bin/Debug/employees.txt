@@ -1,20 +1,83 @@
 [
   {
+    "WorkerID": 1006,
+    "LastName": "Anna",
+    "Name": "Hanna",
+    "Hired": "06.11.2002",
+    "Fired": "",
+    "Salary": 2017.0,
+    "Comments": ""
+  },
+  {
+    "WorkerID": 1007,
+    "LastName": "Boyler",
+    "Name": "Emilja",
+    "Hired": "05.03.2005",
+    "Fired": "",
+    "Salary": 2751.48,
+    "Comments": ""
+  },
+  {
+    "WorkerID": 1003,
+    "LastName": "Warta",
+    "Name": "Grzechu",
+    "Hired": "01.11.1997",
+    "Fired": "25.06.2005",
+    "Salary": 5000.0,
+    "Comments": "Grinch"
+  },
+  {
     "WorkerID": 1002,
-    "Name": "Wanda",
     "LastName": "Panda",
-    "Hired": "2001-01-01T00:00:00",
-    "Fired": "2006-06-06T00:00:00",
+    "Name": "Wanda",
+    "Hired": "01.01.2001",
+    "Fired": "06.06.2006",
     "Salary": 6357.78,
     "Comments": "podejrzana"
   },
   {
+    "WorkerID": 1005,
+    "LastName": "Miś",
+    "Name": "Krzyś",
+    "Hired": "12.05.2020",
+    "Fired": "12.12.2021",
+    "Salary": 3500.15,
+    "Comments": ""
+  },
+  {
     "WorkerID": 1001,
-    "Name": "Marek",
     "LastName": "Koniuszek",
-    "Hired": "2020-11-25T00:00:00",
-    "Fired": "2020-12-26T00:00:00",
+    "Name": "Marek",
+    "Hired": "25.11.2005",
+    "Fired": "26.12.2025",
     "Salary": 3509.95,
     "Comments": "uwagi jakieś"
+  },
+  {
+    "WorkerID": 1004,
+    "LastName": "Clinton",
+    "Name": "Hilary",
+    "Hired": "15.05.1995",
+    "Fired": "04.07.2007",
+    "Salary": 1200.77,
+    "Comments": "Była p.Nie-prezydent"
+  },
+  {
+    "WorkerID": 1010,
+    "LastName": "Szpak",
+    "Name": "Michał",
+    "Hired": "30.11.2020",
+    "Fired": "",
+    "Salary": 3701.25,
+    "Comments": ""
+  },
+  {
+    "WorkerID": 1008,
+    "LastName": "Maś",
+    "Name": "Kaja",
+    "Hired": "30.11.2020",
+    "Fired": "30.11.2020",
+    "Salary": 1876.45,
+    "Comments": "Nie istnieje"
   }
 ]

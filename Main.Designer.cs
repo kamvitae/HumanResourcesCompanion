@@ -99,11 +99,13 @@
             this.dgvWorkers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvWorkers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvWorkers.BackgroundColor = System.Drawing.SystemColors.Info;
             this.dgvWorkers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvWorkers.EnableHeadersVisualStyles = false;
             this.dgvWorkers.Location = new System.Drawing.Point(15, 57);
             this.dgvWorkers.Name = "dgvWorkers";
-            this.dgvWorkers.Size = new System.Drawing.Size(776, 381);
+            this.dgvWorkers.Size = new System.Drawing.Size(988, 439);
             this.dgvWorkers.TabIndex = 5;
             // 
             // btnSave
@@ -128,7 +130,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1012, 508);
             this.Controls.Add(this.lbComboSort);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.dgvWorkers);
@@ -137,6 +139,7 @@
             this.Controls.Add(this.btnFired);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnAdd);
+            this.KeyPreview = true;
             this.Name = "FormMain";
             this.Text = "HR Companion";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormMain_FormClosed);

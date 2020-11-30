@@ -35,7 +35,7 @@ namespace MP_5_2_HRCompanion
         {
             InitializeComponent();
             ComboboxHelper.InitComboboxGroups(cbboxSorter);
-            
+
             RefreshGrid();
             SetColumnsHeader();
 
@@ -45,26 +45,23 @@ namespace MP_5_2_HRCompanion
             var workers = _fileHelper.DeserializeFromFile();
             var sortWorkers = new SortWorkers(workers, cbboxSorter.SelectedIndex);
             dgvWorkers.DataSource = sortWorkers.GetSortedList();
-            //żeby uprościć metodę main i refresh w stosunku do wersji z StudentsDiary, 
-            //utworzymy nową klasę odpowiedzialną za sortowanie listy przy każdym odświeżeniu
-            //
         }
 
 
         private void SetColumnsHeader()
         {
             dgvWorkers.Columns[0].HeaderText = "Identyfikatow pracownika"; // ustaw niemodyfikowalne wszystkie z poziomu dgv
-            dgvWorkers.Columns[1].HeaderText = "Imię";
-            dgvWorkers.Columns[2].HeaderText = "Nazwisko";
-            dgvWorkers.Columns[3].HeaderText = "Data zatrudnienia"; 
-            dgvWorkers.Columns[4].HeaderText = "Zakończył(a) pracę"; 
+            dgvWorkers.Columns[1].HeaderText = "Nazwisko";
+            dgvWorkers.Columns[2].HeaderText = "Imię";
+            dgvWorkers.Columns[3].HeaderText = "Data zatrudnienia";
+            dgvWorkers.Columns[4].HeaderText = "Zakończył(a) pracę";
             dgvWorkers.Columns[5].HeaderText = "Pensja brutto";
             dgvWorkers.Columns[6].HeaderText = "Uwagi"; // z wyjątkiem uwag
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            var AddEditWorker = new AddEditWorker();
+            var AddEditWorker = new AddEditWorker(DateTime.Today);
 
             AddEditWorker.FormClosing += AddEditWorker_FormClosing;
             AddEditWorker.ShowDialog();
@@ -77,7 +74,8 @@ namespace MP_5_2_HRCompanion
                 return;
             }
             var addEditWorker = new AddEditWorker(
-                Convert.ToInt32(dgvWorkers.SelectedRows[0].Cells[0].Value));
+                Convert.ToInt32(
+                    dgvWorkers.SelectedRows[0].Cells[0].Value));
             addEditWorker.FormClosing += AddEditWorker_FormClosing;
             addEditWorker.ShowDialog();
         }
@@ -89,9 +87,35 @@ namespace MP_5_2_HRCompanion
 
         private void btnFired_Click(object sender, EventArgs e)
         {
+            if (dgvWorkers.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Nie zaznaczono pracownika");
+                return;
+            }
+            else
+            {
+                var title = "Rozwiązanie umowy o zatrudnienie";
+                var message = "Czy na pewno chcesz zwolnić tego pracownika?";
+                if (MessageBox.Show(message, title, 
+                    MessageBoxButtons.OKCancel)==DialogResult.OK)
+                {
+                    FireSelectedWorker();
+                }
+            }
+
             // po kliknięciu otwiera się okno z pytaniem czy na pewno chesz zwolnić pracownika. 
             // nieaktywny przycisk "ok" uaktywni się po wpisaniu w txtBox Imienia i Nazwiska zwalnianego pracownika
             // "ok" wprowawdzi do pola Fired pracownika aktualną datę.
+        }
+
+        private void FireSelectedWorker()
+        {
+            var addEditWorker = new AddEditWorker(
+                DateTime.Today,
+                Convert.ToInt32(
+                    dgvWorkers.SelectedRows[0].Cells[0].Value));
+            addEditWorker.FormClosing += AddEditWorker_FormClosing;
+            addEditWorker.ShowDialog();
         }
 
         private void chboxFilter_SelectedIndexChanged(object sender, EventArgs e)
@@ -99,7 +123,7 @@ namespace MP_5_2_HRCompanion
             // filtrowanie wg : Alfabetycznie, Identyfikator, StanuZatrudnienia. Wys.Stawki 
         }
 
-        
+
 
         private void FormMain_FormClosed(object sender, FormClosedEventArgs e)
         {
