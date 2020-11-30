@@ -34,12 +34,8 @@ namespace MP_5_2_HRCompanion
         public FormMain()
         {
             InitializeComponent();
-            //var employees = new List<Worker>(){};   przykładowa lista która się niby zapisuje ale jednak nie do końca
-           // employees.Add(new Worker("Jacek"));
-           // employees.Add(new Worker("Placek"));
-           // employees.Add(new Worker("Agatka"));
-           // employees.Add(new Worker("Pałatka"));
-           // _fileHelper.SerializeToFile(employees);
+            ComboboxHelper.InitComboboxGroups(cbboxSorter);
+            
             RefreshGrid();
             SetColumnsHeader();
 
@@ -47,7 +43,8 @@ namespace MP_5_2_HRCompanion
         private void RefreshGrid()
         {
             var workers = _fileHelper.DeserializeFromFile();
-            dgvWorkers.DataSource = workers;
+            var sortWorkers = new SortWorkers(workers, cbboxSorter.SelectedIndex);
+            dgvWorkers.DataSource = sortWorkers.GetSortedList();
             //żeby uprościć metodę main i refresh w stosunku do wersji z StudentsDiary, 
             //utworzymy nową klasę odpowiedzialną za sortowanie listy przy każdym odświeżeniu
             //

@@ -31,10 +31,11 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnFired = new System.Windows.Forms.Button();
-            this.cbboxFilter = new System.Windows.Forms.ComboBox();
+            this.cbboxSorter = new System.Windows.Forms.ComboBox();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.dgvWorkers = new System.Windows.Forms.DataGridView();
             this.btnSave = new System.Windows.Forms.Button();
+            this.lbComboSort = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvWorkers)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,20 +72,20 @@
             this.btnFired.UseVisualStyleBackColor = false;
             this.btnFired.Click += new System.EventHandler(this.btnFired_Click);
             // 
-            // cbboxFilter
+            // cbboxSorter
             // 
-            this.cbboxFilter.BackColor = System.Drawing.Color.LightCyan;
-            this.cbboxFilter.FormattingEnabled = true;
-            this.cbboxFilter.Location = new System.Drawing.Point(514, 30);
-            this.cbboxFilter.Name = "cbboxFilter";
-            this.cbboxFilter.Size = new System.Drawing.Size(121, 21);
-            this.cbboxFilter.TabIndex = 3;
-            this.cbboxFilter.SelectedIndexChanged += new System.EventHandler(this.chboxFilter_SelectedIndexChanged);
+            this.cbboxSorter.BackColor = System.Drawing.Color.LightCyan;
+            this.cbboxSorter.FormattingEnabled = true;
+            this.cbboxSorter.Location = new System.Drawing.Point(514, 30);
+            this.cbboxSorter.Name = "cbboxSorter";
+            this.cbboxSorter.Size = new System.Drawing.Size(121, 21);
+            this.cbboxSorter.TabIndex = 3;
+            this.cbboxSorter.SelectedIndexChanged += new System.EventHandler(this.chboxFilter_SelectedIndexChanged);
             // 
             // btnRefresh
             // 
             this.btnRefresh.BackColor = System.Drawing.Color.PowderBlue;
-            this.btnRefresh.Location = new System.Drawing.Point(211, 28);
+            this.btnRefresh.Location = new System.Drawing.Point(317, 28);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(75, 23);
             this.btnRefresh.TabIndex = 4;
@@ -95,8 +96,8 @@
             // dgvWorkers
             // 
             this.dgvWorkers.AllowUserToOrderColumns = true;
-            this.dgvWorkers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.dgvWorkers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvWorkers.BackgroundColor = System.Drawing.SystemColors.Info;
             this.dgvWorkers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -107,22 +108,32 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(313, 28);
+            this.btnSave.Location = new System.Drawing.Point(216, 28);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 6;
             this.btnSave.Text = "Zapisz";
             this.btnSave.UseVisualStyleBackColor = true;
             // 
+            // lbComboSort
+            // 
+            this.lbComboSort.AutoSize = true;
+            this.lbComboSort.Location = new System.Drawing.Point(451, 33);
+            this.lbComboSort.Name = "lbComboSort";
+            this.lbComboSort.Size = new System.Drawing.Size(57, 13);
+            this.lbComboSort.TabIndex = 7;
+            this.lbComboSort.Text = "Sortuj wg.:";
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lbComboSort);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.dgvWorkers);
             this.Controls.Add(this.btnRefresh);
-            this.Controls.Add(this.cbboxFilter);
+            this.Controls.Add(this.cbboxSorter);
             this.Controls.Add(this.btnFired);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnAdd);
@@ -131,6 +142,7 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormMain_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.dgvWorkers)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -139,10 +151,11 @@
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnFired;
-        private System.Windows.Forms.ComboBox cbboxFilter;
+        private System.Windows.Forms.ComboBox cbboxSorter;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.DataGridView dgvWorkers;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Label lbComboSort;
     }
 }
 
