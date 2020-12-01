@@ -31,9 +31,7 @@
             this.tbName = new System.Windows.Forms.TextBox();
             this.tbLastName = new System.Windows.Forms.TextBox();
             this.tbWorkerID = new System.Windows.Forms.TextBox();
-            this.tbFired = new System.Windows.Forms.TextBox();
             this.tbSalary = new System.Windows.Forms.TextBox();
-            this.tbHired = new System.Windows.Forms.TextBox();
             this.lbName = new System.Windows.Forms.Label();
             this.lbLastName = new System.Windows.Forms.Label();
             this.lbHired = new System.Windows.Forms.Label();
@@ -44,6 +42,8 @@
             this.rtbComments = new System.Windows.Forms.RichTextBox();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnConfirm = new System.Windows.Forms.Button();
+            this.dtpHired = new System.Windows.Forms.DateTimePicker();
+            this.dtpFired = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // tbName
@@ -68,28 +68,12 @@
             this.tbWorkerID.Size = new System.Drawing.Size(190, 20);
             this.tbWorkerID.TabIndex = 2;
             // 
-            // tbFired
-            // 
-            this.tbFired.Location = new System.Drawing.Point(124, 179);
-            this.tbFired.Name = "tbFired";
-            this.tbFired.ReadOnly = true;
-            this.tbFired.Size = new System.Drawing.Size(190, 20);
-            this.tbFired.TabIndex = 5;
-            // 
             // tbSalary
             // 
             this.tbSalary.Location = new System.Drawing.Point(124, 233);
             this.tbSalary.Name = "tbSalary";
             this.tbSalary.Size = new System.Drawing.Size(190, 20);
             this.tbSalary.TabIndex = 4;
-            // 
-            // tbHired
-            // 
-            this.tbHired.Location = new System.Drawing.Point(124, 153);
-            this.tbHired.Name = "tbHired";
-            this.tbHired.ReadOnly = true;
-            this.tbHired.Size = new System.Drawing.Size(190, 20);
-            this.tbHired.TabIndex = 3;
             // 
             // lbName
             // 
@@ -182,11 +166,28 @@
             this.btnConfirm.UseVisualStyleBackColor = true;
             this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
+            // dtpHired
+            // 
+            this.dtpHired.Location = new System.Drawing.Point(123, 153);
+            this.dtpHired.Name = "dtpHired";
+            this.dtpHired.Size = new System.Drawing.Size(191, 20);
+            this.dtpHired.TabIndex = 16;
+            // 
+            // dtpFired
+            // 
+            this.dtpFired.Enabled = false;
+            this.dtpFired.Location = new System.Drawing.Point(124, 182);
+            this.dtpFired.Name = "dtpFired";
+            this.dtpFired.Size = new System.Drawing.Size(190, 20);
+            this.dtpFired.TabIndex = 17;
+            // 
             // AddEditWorker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(335, 504);
+            this.Controls.Add(this.dtpFired);
+            this.Controls.Add(this.dtpHired);
             this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.rtbComments);
@@ -197,9 +198,7 @@
             this.Controls.Add(this.lbHired);
             this.Controls.Add(this.lbLastName);
             this.Controls.Add(this.lbName);
-            this.Controls.Add(this.tbFired);
             this.Controls.Add(this.tbSalary);
-            this.Controls.Add(this.tbHired);
             this.Controls.Add(this.tbWorkerID);
             this.Controls.Add(this.tbLastName);
             this.Controls.Add(this.tbName);
@@ -215,9 +214,7 @@
         private System.Windows.Forms.TextBox tbName;
         private System.Windows.Forms.TextBox tbLastName;
         private System.Windows.Forms.TextBox tbWorkerID;
-        private System.Windows.Forms.TextBox tbFired;
         private System.Windows.Forms.TextBox tbSalary;
-        private System.Windows.Forms.TextBox tbHired;
         private System.Windows.Forms.Label lbName;
         private System.Windows.Forms.Label lbLastName;
         private System.Windows.Forms.Label lbHired;
@@ -228,5 +225,7 @@
         private System.Windows.Forms.RichTextBox rtbComments;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnConfirm;
+        private System.Windows.Forms.DateTimePicker dtpHired;
+        private System.Windows.Forms.DateTimePicker dtpFired;
     }
 }
