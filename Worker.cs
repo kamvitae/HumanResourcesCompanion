@@ -16,7 +16,7 @@ namespace MP_5_2_HRCompanion
         public string Name { get; set; }
 
         public string Hired{ get; set; }
-        public string Fired{ get; set; }
+        public string Fired { get; set; }
 
         public decimal Salary { get; set; }
 

@@ -34,7 +34,6 @@
             this.cbboxSorter = new System.Windows.Forms.ComboBox();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.dgvWorkers = new System.Windows.Forms.DataGridView();
-            this.btnSave = new System.Windows.Forms.Button();
             this.lbComboSort = new System.Windows.Forms.Label();
             this.chBoxFired = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvWorkers)).BeginInit();
@@ -54,7 +53,7 @@
             // btnEdit
             // 
             this.btnEdit.BackColor = System.Drawing.Color.Khaki;
-            this.btnEdit.Location = new System.Drawing.Point(105, 28);
+            this.btnEdit.Location = new System.Drawing.Point(108, 28);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(75, 23);
             this.btnEdit.TabIndex = 1;
@@ -77,7 +76,7 @@
             // 
             this.cbboxSorter.BackColor = System.Drawing.Color.LightCyan;
             this.cbboxSorter.FormattingEnabled = true;
-            this.cbboxSorter.Location = new System.Drawing.Point(599, 30);
+            this.cbboxSorter.Location = new System.Drawing.Point(570, 30);
             this.cbboxSorter.Name = "cbboxSorter";
             this.cbboxSorter.Size = new System.Drawing.Size(121, 21);
             this.cbboxSorter.TabIndex = 3;
@@ -86,7 +85,7 @@
             // btnRefresh
             // 
             this.btnRefresh.BackColor = System.Drawing.Color.PowderBlue;
-            this.btnRefresh.Location = new System.Drawing.Point(292, 28);
+            this.btnRefresh.Location = new System.Drawing.Point(202, 28);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(75, 23);
             this.btnRefresh.TabIndex = 4;
@@ -109,19 +108,10 @@
             this.dgvWorkers.Size = new System.Drawing.Size(836, 466);
             this.dgvWorkers.TabIndex = 5;
             // 
-            // btnSave
-            // 
-            this.btnSave.Location = new System.Drawing.Point(200, 28);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 23);
-            this.btnSave.TabIndex = 6;
-            this.btnSave.Text = "Zapisz";
-            this.btnSave.UseVisualStyleBackColor = true;
-            // 
             // lbComboSort
             // 
             this.lbComboSort.AutoSize = true;
-            this.lbComboSort.Location = new System.Drawing.Point(536, 35);
+            this.lbComboSort.Location = new System.Drawing.Point(507, 35);
             this.lbComboSort.Name = "lbComboSort";
             this.lbComboSort.Size = new System.Drawing.Size(57, 13);
             this.lbComboSort.TabIndex = 7;
@@ -131,7 +121,7 @@
             // 
             this.chBoxFired.AutoSize = true;
             this.chBoxFired.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.chBoxFired.Location = new System.Drawing.Point(373, 34);
+            this.chBoxFired.Location = new System.Drawing.Point(335, 34);
             this.chBoxFired.Name = "chBoxFired";
             this.chBoxFired.Size = new System.Drawing.Size(151, 17);
             this.chBoxFired.TabIndex = 9;
@@ -146,7 +136,6 @@
             this.ClientSize = new System.Drawing.Size(860, 535);
             this.Controls.Add(this.chBoxFired);
             this.Controls.Add(this.lbComboSort);
-            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.dgvWorkers);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.cbboxSorter);
@@ -171,7 +160,6 @@
         private System.Windows.Forms.ComboBox cbboxSorter;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.DataGridView dgvWorkers;
-        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Label lbComboSort;
         private System.Windows.Forms.CheckBox chBoxFired;
     }

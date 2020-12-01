@@ -9,7 +9,7 @@ namespace MP_5_2_HRCompanion
 {
     public static class ComboboxHelper
     {
-        internal static void InitComboboxGroups(ComboBox comboBox)
+        internal static void InitComboboxSorting(ComboBox comboBox)
         {
             var _sortBy = new List<Sort>
             {

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Globalization;
 
 namespace MP_5_2_HRCompanion
 {
@@ -59,8 +60,8 @@ namespace MP_5_2_HRCompanion
             tbWorkerID.Text = _worker.WorkerID.ToString();
             tbName.Text = _worker.Name;
             tbLastName.Text = _worker.LastName;
-            tbHired.Text = _worker.Hired;
-            tbFired.Text = _worker.Fired;
+            tbHired.Text = _worker.Hired.ToString();
+            tbFired.Text = _worker.Fired.ToString();
             tbSalary.Text = _worker.Salary.ToString();
             rtbComments.Text = _worker.Comments;
         }
@@ -72,7 +73,9 @@ namespace MP_5_2_HRCompanion
                 Name = tbName.Text,
                 LastName = tbLastName.Text,
                 Hired = tbHired.Text,
-                Fired = tbFired.Text,Comments = rtbComments.Text
+                Fired = tbFired.Text,
+                Comments = rtbComments.Text
+
             };
             if (decimal.TryParse(tbSalary.Text, out decimal result))
             {
@@ -111,7 +114,6 @@ namespace MP_5_2_HRCompanion
     private string GetTodaysDate(DateTime todaysDate)
     {
         var dateTime = todaysDate;
-        //var date = dateTime.Date;
         return dateTime.ToString("d");
     }
 }

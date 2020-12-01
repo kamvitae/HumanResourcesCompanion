@@ -33,7 +33,7 @@ namespace MP_5_2_HRCompanion
         public FormMain()
         {
             InitializeComponent();
-            ComboboxHelper.InitComboboxGroups(cbboxSorter);
+            ComboboxHelper.InitComboboxSorting(cbboxSorter);
 
             RefreshGrid();
             SetColumnsHeader();
