@@ -29,14 +29,20 @@ namespace MP_5_2_HRCompanion
         public AddEditWorker(DateTime today)
         {
             InitializeComponent();
-            tbHired.Text = GetTodaysDate(today);
+            dtpHired.Text = GetTodaysDate(today);
         }
         public AddEditWorker(DateTime today, int id = 0)
         {
             InitializeComponent();
             _workerId = id;
             GetWorkerData();
-            tbFired.Text = GetTodaysDate(today);
+            dtpFired.Text = GetTodaysDate(today);
+        }
+        public AddEditWorker(Type parametr) 
+        {
+            //odnośnie konstruktorów, to możesz takie rozróżnienie zrobić na kilka sposobów. Najprostszy to przyjmowanie np 1 parametru type/mode, 
+            //który może przyjmować 3 różne wartości (np typu int 1 , 2 lub 3, albo lepiej enum'y) 
+            //i na podstawie tego co zostało przekazane będziesz wiedział jaki ma być tryb okna/formatki
         }
 
         private void GetWorkerData()
@@ -60,8 +66,8 @@ namespace MP_5_2_HRCompanion
             tbWorkerID.Text = _worker.WorkerID.ToString();
             tbName.Text = _worker.Name;
             tbLastName.Text = _worker.LastName;
-            tbHired.Text = _worker.Hired.ToString();
-            tbFired.Text = _worker.Fired.ToString();
+            dtpHired.Text = _worker.Hired.ToString();
+            dtpFired.Text = _worker.Fired.ToString();
             tbSalary.Text = _worker.Salary.ToString();
             rtbComments.Text = _worker.Comments;
         }
@@ -72,8 +78,8 @@ namespace MP_5_2_HRCompanion
                 WorkerID = _workerId, // raz ustawiony powinien być readonly
                 Name = tbName.Text,
                 LastName = tbLastName.Text,
-                Hired = tbHired.Text,
-                Fired = tbFired.Text,
+                Hired = dtpHired.Text,
+                Fired = dtpFired.Text, // po zmianie txtbox na dtp każdy otrzymuje datę zwolnienia :/
                 Comments = rtbComments.Text
 
             };

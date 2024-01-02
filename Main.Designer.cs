@@ -95,7 +95,6 @@
             // 
             // dgvWorkers
             // 
-            this.dgvWorkers.AllowUserToOrderColumns = true;
             this.dgvWorkers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -105,6 +104,10 @@
             this.dgvWorkers.EnableHeadersVisualStyles = false;
             this.dgvWorkers.Location = new System.Drawing.Point(15, 57);
             this.dgvWorkers.Name = "dgvWorkers";
+            this.dgvWorkers.ReadOnly = true;
+            this.dgvWorkers.RowHeadersVisible = false;
+            this.dgvWorkers.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            this.dgvWorkers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvWorkers.Size = new System.Drawing.Size(836, 466);
             this.dgvWorkers.TabIndex = 5;
             // 

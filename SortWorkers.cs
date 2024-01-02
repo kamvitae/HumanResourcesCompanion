@@ -94,7 +94,7 @@ namespace MP_5_2_HRCompanion
 
         private List<Worker> FilterCurrentyHiredOnly(List<Worker> list, bool hideFired)
         {
-            return list.Where(Worker => Worker.Fired == null).ToList();
+            return list.Where(Worker => Worker.Fired == "").ToList();
         }
 
     }

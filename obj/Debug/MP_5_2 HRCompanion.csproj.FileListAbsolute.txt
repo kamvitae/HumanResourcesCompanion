@@ -1,4 +1,3 @@
-C:\Users\Kamvitae Surimushado\source\repos\MP_5_2 HRCompanion\MP_5_2 HRCompanion\obj\Debug\MP_5_2 HRCompanion.csprojAssemblyReference.cache
 C:\Users\Kamvitae Surimushado\source\repos\MP_5_2 HRCompanion\MP_5_2 HRCompanion\obj\Debug\MP_5_2_HRCompanion.FormMain.resources
 C:\Users\Kamvitae Surimushado\source\repos\MP_5_2 HRCompanion\MP_5_2 HRCompanion\obj\Debug\MP_5_2_HRCompanion.Properties.Resources.resources
 C:\Users\Kamvitae Surimushado\source\repos\MP_5_2 HRCompanion\MP_5_2 HRCompanion\obj\Debug\MP_5_2 HRCompanion.csproj.GenerateResource.cache
@@ -30,3 +29,4 @@ C:\Users\Kamvitae Surimushado\source\repos\MP_5_2 HRCompanion\MP_5_2 HRCompanion
 C:\Users\Kamvitae Surimushado\source\repos\MP_5_2 HRCompanion\MP_5_2 HRCompanion\obj\Debug\MP_5_2 HRCompanion.csproj.CopyComplete
 C:\Users\Kamvitae Surimushado\source\repos\MP_5_2 HRCompanion\MP_5_2 HRCompanion\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Kamvitae Surimushado\source\repos\MP_5_2 HRCompanion\MP_5_2 HRCompanion\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Kamvitae Surimushado\source\repos\MP_5_2 HRCompanion\MP_5_2 HRCompanion\obj\Debug\MP_5_2 HRCompanion.csproj.AssemblyReference.cache
